@@ -23,6 +23,24 @@ namespace Shop.Data.Mocks
                       Name = "Name1",
                       Description = "Description1"
                     },
+                    new Categories()
+                    {
+                      Id = 2,
+                      Name = "Name2",
+                      Description = "Description2"
+                    },
+                    new Categories()
+                    {
+                      Id = 3,
+                      Name = "Name3",
+                      Description = "Description3"
+                    },
+                    new Categories()
+                    {
+                      Id = 4,
+                      Name = "Name4",
+                      Description = "Description4"
+                    },
                 };
             } 
         }
