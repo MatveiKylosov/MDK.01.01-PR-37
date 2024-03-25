@@ -9,4 +9,13 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\img\ic-basket.png" />
+    <None Include="wwwroot\img\icon.png" />
+  </ItemGroup>
+
 </Project>
