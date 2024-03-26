@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.StaticFiles;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Shop.Data.Interfaces;
@@ -29,7 +30,16 @@ namespace Shop
         {
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
-            app.UseStaticFiles();
+
+
+            var provider = new FileExtensionContentTypeProvider();
+            // Add new mappings
+            provider.Mappings[".less"] = "text/css";
+
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                ContentTypeProvider = provider
+            });
             app.UseMvcWithDefaultRoute();
 /*            if (env.IsDevelopment())
             {
